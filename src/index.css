@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,564 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: antiquewhite;
+  padding: 0 20px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.form {
+  height: 100px;
+}
+
+.your-notes{
+  margin-left: 20px;
+}
+
+.subject-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.subject-card:hover .subject-options-gone{
+  width: 50px;
+  transition: 0.5s ease-in-out;
+  right: 0;
+  top: 5px;
+  width: 250px;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  
+}
+
+.note-title:hover .note-card-buttons{
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  width: 250px;
+  
+}
+
+.note-card-buttons{
+  position: absolute;
+  top: -15px;
+  right: -100px;
+  width: 0;
+  transition: 0.5s ease-in-out;
+}
+.note-card-buttons-edit{
+  position: absolute;
+  top: 30px;
+  left: 250px;
+}
+
+.colors{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+}
+
+
+
+.subject-card .subject-title{
+  position: absolute;
+  padding: 10px 15px;
+  border: none;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: inherit;
+  cursor: pointer;
+  font-size: 2rem;
+  /* background-color: inherit; */
+}
+
+.subject-options-gone{
+  position: absolute;
+  /* display: none; */
+  width: 0;
+  top: 0;
+  right: -30%;
+  overflow-x: hidden;
+}
+
+.add{
+  width: 110px;
+  height: 40px;
+  border: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+
+.subject-options-visible{
+  display: visible;
+  background-color: aqua;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 3s ease-in;
+}
+
+
+.blue {
+  background-color: rgb(48, 48, 255,0.6);
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.red {
+  background-color: rgb(255, 77, 77,0.8);
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 100%;
+}
+
+
+
+.yellow {
+  background-color: rgb(255, 255, 125,0.6);
+  height: 100%;
+  border-radius: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.green {
+  background-color: rgb(0, 184, 0,0.6);
+  height: 100%;
+  border-radius: 10px;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+}
+
+
+.purple {
+  background-color: rgb(170, 2, 170, 0.5);
+  height: 100%;
+  border-radius: 10px;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+}
+
+
+.pink {
+  background-color: rgb(255, 142, 161,0.8);
+  height: 100%;
+  border-radius: 10px;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+}
+
+
+.noColor {
+  height: 100%;
+  background-color: rgb(216, 216, 216,0.7);
+  border-radius: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.main-view{
+  height: 70px;
+  width: 95%;
+  margin: 50px auto;
+}
+
+
+
+.subject-form{
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.subject-input{
+  display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  width: 70%;
+} 
+
+.subject-button{
+  display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  background-color: rgb(117, 247, 247);
+  transition: 0.2s ease-in ;
+} 
+
+.subject-button:hover{
+  cursor: pointer;
+  background-color: aqua;
+}
+
+.expand{
+  width: 110px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+.main{
+  width: 110px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.main-select{
+  margin-left: 20px;
+  width: 160px;
+  border: none;
+  padding: 10px 15px;
+}
+
+
+.subject-list-title-input{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  width: 500px;
+}
+
+.subject-list-title-input input{
+padding: 10px 15px;
+margin: 20px auto 0 auto;
+width: 250px;
+}
+/* .subject-list-title-input .editing-buttons{
+  height: 100px;
+  z-index: 999;
+  width: 500px;
+  height: 50px;
+  top: 70px;
+} */
+
+.subject-cancel-btn {
+  background-color: white;
+  position: absolute;
+  border: none;
+  right: 109px;
+  padding: 10px 15px;
+  width: 110px;
+  top: 70px;
+  cursor: pointer;
+}
+
+.subject-save-btn {
+  background-color: white;
+  border: none;
+  position: absolute;
+  padding: 10px 15px;
+  width: 110px;
+  left: 109px;
+  top: 70px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.subject-list-title{
+  position: absolute;
+  top: 0;
+  font-size: 30px;
+}
+
+
+.note-section{
+  margin: 40px auto 0 auto;
+  width: 98%;
+}
+
+
+
+.note-form .input-field{
+  margin-top: 100px;
+}
+.note-form .input-field input{
+  display: inline-block;
+  padding: 10px 15px;
+  width: 200px;
+}
+.note-form .input-field select{
+  display: inline-block;
+  padding: 10px 15px;
+  width: 160px;
+  border: none;
+}
+
+.textarea {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: aqua;
+}
+
+.ck-editor__editable_inline {
+  min-height:200px;
+  min-width: 800px;
+}
+
+.ck-toolbar{
+  min-width: 800px;
+}
+
+@media screen and (max-width:1100px) {
+  .ck-editor__editable_inline {
+    min-height:200px;
+    min-width: 90%;
+  }
+  
+  .ck-toolbar{
+    min-width: 100%;
+  }
+
+  
+}
+
+.note-form button{
+  display: inline-block;
+}
+
+
+
+.sort{
+  border-bottom: 1px solid black;
+}
+
+.sort select{
+  width: 160px;
+  border: none;
+  padding: 10px 15px;
+}
+.edit-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 1rem;
+  background-color: inherit;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.edit-button:hover{
+font-size: 1.4rem;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.note-list-title-input{
+  width: 90%;
+  margin: 30px auto 0 auto;
+}
+
+.note-list-title-input input{
+  width: 200px;
+  display: inline-block;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+}
+.note-cancel-btn {
+  background-color: white;
+  border: none;
+  padding: 10px 15px;
+  width: 110px;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.note-save-btn {
+  background-color: white;
+  border: none;
+  padding: 10px 15px;
+  width: 110px;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.note-title{
+  padding-top: 10px;
+  margin-top: 20px;
+  padding-left: 20px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.container div{
+  padding-bottom: 20px;
+}
+
+
+.no-color{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.no-color:hover{
+height: 20px;
+width: 20px;
+}
+
+.red-color{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  display: inline-block;
+  border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.red-color:hover {
+  height: 20px;
+  width: 20px;
+}
+.blue-color{
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: blue;
+  display: inline-block;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.blue-color:hover {
+  height: 20px;
+  width: 20px;
+}
+.yellow-color{
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(240, 240, 0);
+  display: inline-block;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.yellow-color:hover {
+  height: 20px;
+  width: 20px;
+}
+.green-color{
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: green;
+  display: inline-block;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.green-color:hover {
+  height: 20px;
+  width: 20px;
+}
+.pink-color{
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: pink;
+  display: inline-block;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.pink-color:hover {
+  height: 20px;
+  width: 20px;
+}
+.purple-color{
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(231, 1, 231);
+  display: inline-block;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.purple-color:hover {
+  height: 20px;
+  width: 20px;
+}
+
+.delete-x{
+  background-color: inherit;
+  border: none;
+  color: red;
+  font-size: 1.1rem;
+  display: inline-block;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.delete-x:hover{
+  font-size: 1.4rem;
 }
